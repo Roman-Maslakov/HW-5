@@ -7,19 +7,13 @@ int[] MyArr = CreateArray();
 string array = String.Join(", ", MyArr);
 int SON = SumOfOdd(MyArr);
 Console.WriteLine("[" + array + "] -> " + SON);
-Console.WriteLine("Sum of odd numbers in created array is - " + SON);
-
-int Fill()
-{
-    int n = new Random().Next(-99, 100);
-    return n;
-}
+Console.WriteLine("Sum of numbers with odd index in created array is - " + SON);
 
 int[] CreateArray()
 {
     int i = new Random().Next(4, 11); //в условии не указано кол-во элементов массива
     int[] Arr = new int[i];
-    for (int j = 0; j < Arr.Length; j++) Arr[j] = Fill();
+    for (int j = 0; j < Arr.Length; j++) Arr[j] = new Random().Next(-99, 100);
     return Arr;
 }
 

@@ -7,13 +7,7 @@ int[] MyArr = CreateArray();
 string array = String.Join(", ", MyArr);
 int S = Sort(MyArr);
 Console.WriteLine("[" + array + "] -> " + S);
-Console.WriteLine("Sum of odd numbers in created array is - " + S);
-
-int Fill()
-{
-    int n = new Random().Next(100, 1000);
-    return n;
-}
+Console.WriteLine("Count of even numbers is  - " + S);
 
 int Sort(int[] arr)
 {
@@ -27,6 +21,6 @@ int[] CreateArray()
 {
     int i = new Random().Next(4, 11); //в условии не указано кол-во элементов массива
     int[] Arr = new int[i];
-    for (int j = 0; j < Arr.Length; j++) Arr[j] = Fill();
+    for (int j = 0; j < Arr.Length; j++) Arr[j] = new Random().Next(100, 1000);
     return Arr;
 }
