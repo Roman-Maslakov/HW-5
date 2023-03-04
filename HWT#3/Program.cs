@@ -5,13 +5,13 @@
 8 4 2 4
 Среднее арифметическое каждого столбца: 4,6; 5,6; 3,6; 3. */
 
-double[,] ourArray = CreateDoubleArray(6, 5);
+int[,] ourArray = CreateDoubleArray(6, 5);
 PrintDuoArray(ourArray);
 Console.WriteLine("Среднее арифметическое каждого столбца: " + ArithmeticMean(ourArray));
 
-double[,] CreateDoubleArray(int x, int y)
+int[,] CreateDoubleArray(int x, int y)
 {
-    double[,] arrayDuo = new double[x, y];
+    int[,] arrayDuo = new int[x, y];
     for (int i = 0; i < arrayDuo.GetLength(0); i++)
     {
         for (int j = 0; j < arrayDuo.GetLength(1); j++)
@@ -20,7 +20,7 @@ double[,] CreateDoubleArray(int x, int y)
     return arrayDuo;
 }
 
-void PrintDuoArray(double[,] duoArr)
+void PrintDuoArray(int[,] duoArr)
 {
     for (int i = 0; i < duoArr.GetLength(0); i++)
     {
@@ -30,7 +30,7 @@ void PrintDuoArray(double[,] duoArr)
     }
 }
 
-string ArithmeticMean(double[,] arr)
+string ArithmeticMean(int[,] arr)
 {
     double[] meanValue = new double[arr.GetLength(1)];
     int meanValueIndex = 0;
