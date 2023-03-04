@@ -4,7 +4,7 @@
 1 4 7 2
 5 9 2 3
 8 4 2 4 
-17 -> такого числа в массиве нет */
+[6, 6] -> такого числа в массиве нет */
 
 int[,] ourArray = CreateDoubleArray(5, 5);
 PrintDuoArray(ourArray);
