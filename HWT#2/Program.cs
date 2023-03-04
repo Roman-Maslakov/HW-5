@@ -39,5 +39,5 @@ void FindNumber (int[,] duoArr)
     Console.Write("Столбец номер - ");
     int column = Convert.ToInt32(Console.ReadLine());
     if (row > duoArr.GetLength(0) || column > duoArr.GetLength(1)) Console.WriteLine($"числа с адресом [{row}; {column}] в массиве нет");
-    else Console.WriteLine(duoArr[row - 1, column - 1]);
+    else Console.WriteLine("Число по указанному адресу = " + duoArr[row - 1, column - 1]);
 }
