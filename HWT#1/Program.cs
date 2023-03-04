@@ -1,26 +1,20 @@
-﻿/* Задайте массив заполненный случайными положительными трёхзначными числами. 
-Напишите программу, которая покажет количество чётных чисел в массиве.
-[345, 897, 568, 234] -> 2 */
-
-//Console.WriteLine("Quantity of even numbers in created array is - " + Sort(CreateArray()));
-int[] MyArr = CreateArray();
-string array = String.Join(", ", MyArr);
-int S = Sort(MyArr);
-Console.WriteLine("[" + array + "] -> " + S);
-Console.WriteLine("Count of even numbers is  - " + S);
-
-int Sort(int[] arr)
+﻿static int[,] CreateDoubleArray(int m, int n)
 {
-    int sort = 0;
-    for (int i = 0; i < arr.Length; i++) 
-        if (arr[i] % 2 == 0) sort++;
-    return sort;
+    int[,] arrayDuo = new int[m, n];
+    for (int i = 0; i < arrayDuo.GetLength(0); i++)
+    {
+        for (int j = 0; j < arrayDuo.GetLength(1); j++)
+            arrayDuo[i, j] = new Random().Next(2, 10);
+    }
+    return arrayDuo;
 }
 
-int[] CreateArray()
+static void PrintDuoArray(int[,] duoArr)
 {
-    int i = new Random().Next(4, 11); //в условии не указано кол-во элементов массива
-    int[] Arr = new int[i];
-    for (int j = 0; j < Arr.Length; j++) Arr[j] = new Random().Next(100, 1000);
-    return Arr;
+    for (int i = 0; i < duoArr.GetLength(0); i++)
+    {
+        for (int j = 0; j < duoArr.GetLength(1); j++)
+            Console.Write($"{duoArr[i, j]} ");
+        Console.WriteLine();    
+    }
 }
